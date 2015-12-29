@@ -86,7 +86,7 @@ public class HashTreesPersistentStore extends HashTreesBaseStore {
 		createDir(dbDir);
 		Options options = new Options();
 		options.createIfMissing(true);
-		return new JniDBFactory().open(new File(dbDir), options);
+		return JniDBFactory.factory.open(new File(dbDir), options);
 	}
 
 	public String getDbDir() {
